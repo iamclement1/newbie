@@ -147,9 +147,18 @@ hr.light-100 {
 }
 
 @media (max-width: 768px) {
+  .carousel {
+    height: 50%;
+  }
 
   .carousel-caption {
     top: 65%;
+  }
+
+  .carousel-inner img {
+    /* width: 100%; */
+    height: 50%;
+    /* opacity: 0.9; */
   }
 
   .carousel-caption h1 {
