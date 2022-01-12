@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,6 +10,9 @@ html, body {
 
 .navbar {
   padding: .8rem;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 }
 
 .navbar-nav li {
@@ -19,16 +23,15 @@ html, body {
   font-size: 1.1em !important;
 }
 
-
 .navbar-brand {
-    padding: 0;
-    width: 50px;
+  padding: 0;
+  width: 50px;
 }
-
 
 .carousel-inner img {
   width: 100%;
   height: 100%;
+  opacity: 0.7;
 }
 
 .carousel-caption {
@@ -49,14 +52,23 @@ html, body {
   padding-bottom: 1rem;
 }
 
-.btn-primary:hover {
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* .btn-primary:hover {
   background-color: cyan;
   border: none;
   color: #000;
   font-weight: 500;
   font: bold;
-}
-
+} */
 
 .jombotron {
   padding: 1rem;
@@ -119,9 +131,10 @@ hr.light-100 {
   margin-bottom: 1rem;
 }
 
-.footer img{
+.footer img {
   width: 12%;
 }
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
   .social a {
@@ -130,57 +143,59 @@ hr.light-100 {
   }
 
 }
+
 @media (max-width: 768px) {
 
-.carousel-caption {
-  top: 45%;
+  .carousel-caption {
+    top: 45%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 350%
+  }
+
+  .carousel-caption h3 {
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: .2rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px 14px;
+
+  }
+
+  .display-4 {
+    font-size: 200%;
+  }
+
+  .social a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
 }
 
-.carousel-caption h1 {
-  font-size: 350%
-}
-
-.carousel-caption h3 {
-  font-size: 30px;
-  font-weight: 300;
-  padding-bottom: .2rem;
-}
-
-.carousel-caption .btn {
-  font-size: 95%;
-  padding: 8px 14px;
-
-}
-
-.display-4 {
-  font-size: 200%;
-}
-
-.social a {
-  font-size: 2.5em;
-  padding: 1.2rem;
-}
-}
 @media (max-width: 576px) {
   .carousel-caption {
     top: 55%;
   }
-  
+
   .carousel-caption h1 {
     font-size: 150%;
     font: bold;
   }
-  
+
   .carousel-caption h3 {
     font-size: 20px;
     font-weight: 300;
     padding-bottom: .2rem;
   }
-  
+
   .carousel-caption .btn {
     font-size: 90%;
     padding: 4px 8px;
-  
+
   }
 
   .carousel-indicators {
@@ -206,13 +221,15 @@ hr.light-100 {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
+
 /*--- Fixed Background Image --*/
 figure {
   position: relative;
   width: 100%;
   height: 60%;
-  margin: 0!important;
+  margin: 0 !important;
 }
+
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
   position: absolute;
@@ -221,6 +238,7 @@ figure {
   width: 100%;
   height: 100%;
 }
+
 #fixed {
   background-image: url('./img/slide1.jpg');
   position: fixed;
@@ -232,12 +250,13 @@ figure {
   background-size: cover;
   background-position: center center;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
 }
+
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 
@@ -260,10 +279,3 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
-
-
-
-
-
-
